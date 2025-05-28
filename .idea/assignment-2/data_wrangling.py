@@ -89,7 +89,6 @@ df.drop(df[df['date_added'].isna()].index,axis=0,inplace=True)
 df.drop(df[df['rating'].isna()].index,axis=0,inplace=True)
 df.drop(df[df['duration'].isna()].index,axis=0,inplace=True)
 
-Errors
 # check if there are any added_dates that come before release_year
 import datetime as dt
 sum(df['date_added'].dt.year < df['release_year'])
@@ -109,4 +108,3 @@ df.sample(5)
 
 # Save as CSV
 df.to_csv('C:/Users/SJSawe/Downloads/archive/cybershujaa/cleaned_netflix.csv', index=False)
-df.to_csv('/kaggle/working/cleaned_netflix.csv', index=False)
